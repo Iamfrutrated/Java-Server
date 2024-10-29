@@ -1,0 +1,5 @@
+This folder is also about inheritance.
+
+The class with the main method is the SubjectsTester0 class. It gives data to the other classes through methods related to inheritance,
+and it outputs a line of output each time it cycles through the classes. This contains more classes than Staffing0, therefore making it
+more complex as there are more things to follow to understand the code. 
