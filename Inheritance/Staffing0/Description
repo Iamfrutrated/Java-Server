@@ -1,0 +1,5 @@
+The files in Staffing0 describe the basics of inheritance.
+
+The class with the main method is StaffTester0.java, which is in charge of taking in data from other classes and outputting it.
+StaffTester0 outputs the "profile" of the character that is being "played" using a method within the class itself. Staff0 is the main
+class that contains the data points, and is also the parent class of MinimumWageWorker0.java.
