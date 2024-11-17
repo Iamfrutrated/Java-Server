@@ -1,0 +1,52 @@
+Take the example shown below:
+(assuming the program runs)
+
+int factorialNum = 9;
+int runNum = 9;
+
+public void factorial()
+{
+    if(runNum == 1)
+        return;
+
+    factorialNum *= (factorialNum - 1);
+    runNum --;
+    factorial();
+}
+
+Now this example is pretty straightforward. First, you enter the method with runNum being 9. 9 is clearly not 1, so we move on.
+Now we do the factorial operation. We use factorialNum *= (factorialNum - 1), which in this case is 9 * 8. Then we decrement runNum, 
+go into the next iteration, rinse and repeat. Nothing interesting here.
+
+----------------------------------------------------------------------------------------------------------------------------------------
+Now take this example:
+(assuming the program runs)
+
+public static void main(String[] args)
+{
+		int nineFactorial = factorial(9, 9);
+		System.out.println(nineFactorial);
+}
+
+public int factorial(int runNum, int factorialNum)
+{  
+		  if(runNum == 1)
+			  return factorialNum;
+		
+		  return factorial(runNum - 1, factorialNum * (runNum - 1));
+}
+
+This gets exponentially more interesting. We see that runNum and factorialNum start off at 9, 9 respectively. We go through the same 
+process as before. runNum is 9, therefore it is not 1, so we move on. Now we see line 36. We see that we evaluate an expression that 
+loops back on itself. Now this keeps cycling and cycling until runNum is 1, which we can easily trace to. However, we still haven't 
+figured out what that "return" does. Now this really bothers me, I mean, what are we returning anways?........ Or does it? If we examine
+what happens when runNum = 1, we find that we just return out of the method. Well, that makes it simple.
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
