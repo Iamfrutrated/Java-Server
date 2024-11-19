@@ -41,10 +41,28 @@ process as before. runNum is 9, therefore it is not 1, so we move on. Now we see
 loops back on itself. Now this keeps cycling and cycling until runNum is 1, which we can easily trace to. However, we still haven't 
 figured out what that "return" does. Now this really bothers me, I mean, what are we returning anways?........ Or does it? If we examine
 what happens when runNum = 1, we find that we just return out of the method. Well, that makes it simple.
------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
+Now take this example:
+(assuming the program runs)
 
+public static void main(String[] args)
+{
+	int nineFactorial = factorial(9);
+	System.out.println(nineFactorial);
+}
 
+public int factorial(int factorialDegree)
+{
+	if(factorialDegree == 1)
+		return 1;
+	else
+		return factorialDegree * factorial(factorialDegree - 1);
+}
 
+In a real program, I would recommend this method. Not only is this method easily to follow, it's also very easy to read and understand.
+Running it through, we see that factorialDegree starts at 9. 9 is not 1, so we go to the else part. We return 9 * factorial(8). Now you 
+loop through the one with 8, and the 7, 6, 5, ... until you reach 1. You then return 1 back out to the previous, which was 2. Now you get 2 * 1, which returns to 3, and you get 3 * 2, .... until you reach 9 factorial. 
+----------------------------------------------------------------------------------------------------------------------------------------
 
 
 
