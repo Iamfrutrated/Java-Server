@@ -38,9 +38,7 @@ public int factorial(int runNum, int factorialNum)
 
 This gets exponentially more interesting. We see that runNum and factorialNum start off at 9, 9 respectively. We go through the same 
 process as before. runNum is 9, therefore it is not 1, so we move on. Now we see line 36. We see that we evaluate an expression that 
-loops back on itself. Now this keeps cycling and cycling until runNum is 1, which we can easily trace to. However, we still haven't 
-figured out what that "return" does. Now this really bothers me, I mean, what are we returning anways?........ Or does it? If we examine
-what happens when runNum = 1, we find that we just return out of the method. Well, that makes it simple.
+loops back on itself. Now this keeps cycling and cycling until runNum is 1, which we can easily trace to. This just keeps running until runNum becomes 1, which then factorialNum is returned.
 ----------------------------------------------------------------------------------------------------------------------------------------
 Now take this example:
 (assuming the program runs)
